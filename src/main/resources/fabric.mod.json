@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "twisb-combat",
+	"version": "${version}",
+	"name": "TWISB-combat",
+	"description": "Combat, The Way It Should Be! This mod tweaks health regeneration, throwable potions and tridents to improve the combat experience.",
+	"authors": [
+		"SunScript_"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/twisb-combat/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"twisb.combat.TWISBcombat"
+		],
+		"client": [
+			"twisb.combat.TWISBcombatClient"
+		]
+	},
+	"mixins": [
+		"twisb-combat.mixins.json",
+		{
+			"config": "twisb-combat.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.15.11",
+		"minecraft": "~1.21",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}

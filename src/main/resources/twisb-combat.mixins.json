@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "package": "twisb.combat.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "DrownedEntityMixin",
+    "HungerManagerMixin",
+    "ThrowablePotionItemMixin",
+    "TridentItemMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+	}
+}
