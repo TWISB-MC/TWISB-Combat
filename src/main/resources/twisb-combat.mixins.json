@@ -5,6 +5,8 @@
   "mixins": [
     "DrownedEntityMixin",
     "HungerManagerMixin",
+    "LingeringPotionItemMixin",
+    "SplashPotionItemMixin",
     "ThrowablePotionItemMixin",
     "TridentItemMixin"
   ],

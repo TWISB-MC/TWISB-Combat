@@ -44,6 +44,16 @@ public abstract class ThrowablePotionItemMixin extends PotionItem implements Pro
 //            potionEntity.setVelocity(user, user.getPitch(), user.getYaw(), -20.0F, 0.5F, 1.0F);
             world.spawnEntity(potionEntity);
         }
+        world.playSound(
+                null,
+                user.getX(),
+                user.getY(),
+                user.getZ(),
+                SoundEvents.ENTITY_SPLASH_POTION_THROW,
+                SoundCategory.PLAYERS,
+                0.5F,
+                0.4F / (world.getRandom().nextFloat() * 0.4F + 0.8F)
+        );
         if (user instanceof PlayerEntity playerEntity) {
             playerEntity.incrementStat(Stats.USED.getOrCreateStat(this));
         }
@@ -51,6 +61,7 @@ public abstract class ThrowablePotionItemMixin extends PotionItem implements Pro
     }
 
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
+        LOGGER.info("Using");
         ItemStack itemStack = user.getStackInHand(hand);
         user.setCurrentHand(hand);
         return TypedActionResult.pass(itemStack);
