@@ -6,6 +6,8 @@
     "DrownedEntityMixin",
     "HungerManagerMixin",
     "LingeringPotionItemMixin",
+    "LivingEntityMixin",
+    "PotionEntityMixin",
     "SplashPotionItemMixin",
     "ThrowablePotionItemMixin",
     "TridentItemMixin"

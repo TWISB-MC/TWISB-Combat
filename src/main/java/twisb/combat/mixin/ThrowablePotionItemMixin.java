@@ -61,7 +61,6 @@ public abstract class ThrowablePotionItemMixin extends PotionItem implements Pro
     }
 
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
-        LOGGER.info("Using");
         ItemStack itemStack = user.getStackInHand(hand);
         user.setCurrentHand(hand);
         return TypedActionResult.pass(itemStack);
